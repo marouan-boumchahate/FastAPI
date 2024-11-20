@@ -40,6 +40,17 @@ class UserVertification(BaseModel):
     current_password: str
     new_password: str = Field(min_length=5)
 
+@router.get('/allusers', status_code=status.HTTP_200_OK)
+async def get_users(user: user_dependency,
+                    db: db_dependency):
+    if user is None:
+        raise HTTPException(status_code=401, detail='Authentication Failed')
+    
+    if user['role'] != 'admin':
+        raise HTTPException(status_code=401, detail='This user is not allowed to get other users')
+    
+    return db.query(Users).filter(Users.id != user.get('id')).all()
+
 
 @router.get('/', status_code=status.HTTP_200_OK)
 async def get_user(user: user_dependency,
