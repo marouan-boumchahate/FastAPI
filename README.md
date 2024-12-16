@@ -7,7 +7,7 @@ This repository hosts a to-do application built using **FastAPI**, a modern Pyth
 - **Task Management**: Add, update, delete, and list tasks.
 - **FastAPI**: Utilizes FastAPI for creating APIs with fast performance.
 - **Database Integration**: Supports SQLite for persistent data storage.
-- **Frontend**: Integrates HTML and JavaScript for a responsive user interface.
+- **Frontend**: Integrates HTML, CSS and JavaScript for a responsive user interface.
 - **Docker Support**: Includes a Dockerfile for containerization.
 
 ## Technologies Used
@@ -36,7 +36,7 @@ This repository hosts a to-do application built using **FastAPI**, a modern Pyth
 
 4. **Run the application**:
    ```bash
-   uvicorn main:app --reload
+   uvicorn TodoApp.main:app --reload
    ```
    The application will be accessible at `http://127.0.0.1:8000`.
 
@@ -61,10 +61,8 @@ To run the application in a Docker container:
 ## Contributing
 Contributions are welcome! Please fork the repository and create a pull request with your proposed changes.
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
 ## Contact
 For questions or feedback, feel free to reach out:
 - **GitHub**: [marouan-boumchahate](https://github.com/marouan-boumchahate)
+- **Linkedin**: [marouan boumchahate](https://www.linkedin.com/in/marouan-boumchahate-843543249/)
 
